@@ -1,0 +1,262 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Xenice Member\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-19 02:54+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.8.0; wp-6.8.3; php-8.2.28\n"
+"X-Domain: xenice-member"
+
+#: templates/level-list.php:26
+#, php-format
+msgid "%s level deleted."
+msgid_plural "%s levels deleted."
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/member-list.php:26
+#, php-format
+msgid "%s membership deleted."
+msgid_plural "%s memberships deleted."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-level-duration.php:24
+msgid "1 Day"
+msgstr ""
+
+#: includes/class-level-duration.php:19
+msgid "1 Year"
+msgstr ""
+
+#: includes/class-level-duration.php:23
+msgid "3 Days"
+msgstr ""
+
+#: includes/class-level-duration.php:21
+msgid "30 Days"
+msgstr ""
+
+#: includes/class-level-duration.php:22
+msgid "7 Days"
+msgstr ""
+
+#: includes/class-level-duration.php:20
+msgid "90 Days"
+msgstr ""
+
+#. Description of the plugin
+msgid "A comprehensive membership management plugin for WordPress."
+msgstr ""
+
+#: includes/class-member-list-table.php:112
+msgid "Active"
+msgstr ""
+
+#: includes/class-level-editor.php:129 templates/level-list.php:17
+msgid "Add Level"
+msgstr ""
+
+#: includes/class-member-editor.php:49 includes/class-member-editor.php:105
+#: templates/member-list.php:18
+msgid "Add Member"
+msgstr ""
+
+#: includes/class-level-editor.php:66
+msgid "Add Membership Level"
+msgstr ""
+
+#: xenice-member.php:137
+msgid "Annual Member"
+msgstr ""
+
+#: includes/class-level-list-table.php:58
+msgid "Are you sure you want to delete this level?"
+msgstr ""
+
+#: includes/class-member-list-table.php:66
+msgid "Are you sure you want to delete this member?"
+msgstr ""
+
+#: includes/class-level-list-table.php:59
+#: includes/class-level-list-table.php:118
+#: includes/class-member-list-table.php:188
+msgid "Delete"
+msgstr ""
+
+#: includes/class-member-list-table.php:67
+msgid "Delete Membership"
+msgstr ""
+
+#: includes/class-level-list-table.php:24 includes/class-level-editor.php:86
+msgid "Duration"
+msgstr ""
+
+#: includes/class-level-list-table.php:54
+msgid "Edit"
+msgstr ""
+
+#: includes/class-member-editor.php:49 includes/class-member-list-table.php:58
+msgid "Edit Member"
+msgstr ""
+
+#: includes/class-level-editor.php:65
+msgid "Edit Membership Level"
+msgstr ""
+
+#: includes/class-member-list-table.php:24
+msgid "Email"
+msgstr ""
+
+#: includes/class-member-editor.php:96 includes/class-member-list-table.php:26
+msgid "Expiration Time"
+msgstr ""
+
+#: includes/class-member-list-table.php:102
+msgid "Expired"
+msgstr ""
+
+#: includes/class-wc-free-download.php:48
+#: includes/class-wc-free-download.php:56
+msgid "Free Download"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://xenice.com"
+msgstr ""
+
+#: includes/class-level-list-table.php:26
+msgid "ID"
+msgstr ""
+
+#: includes/class-member-list-table.php:114
+msgid "Inactive"
+msgstr ""
+
+#: includes/class-level-list-table.php:23 includes/class-level-editor.php:77
+msgid "Level Name"
+msgstr ""
+
+#: includes/class-level-duration.php:18
+msgid "Lifetime"
+msgstr ""
+
+#: xenice-member.php:131
+msgid "Lifetime Member"
+msgstr ""
+
+#: xenice-member.php:80 xenice-member.php:81 templates/member-list.php:16
+msgid "Member List"
+msgstr ""
+
+#: xenice-member.php:69 xenice-member.php:70
+msgid "Members"
+msgstr ""
+
+#: includes/class-member-editor.php:80 includes/class-member-list-table.php:25
+msgid "Membership Level"
+msgstr ""
+
+#: xenice-member.php:89 xenice-member.php:90 templates/level-list.php:15
+msgid "Membership Levels"
+msgstr ""
+
+#: xenice-member.php:143
+msgid "Monthly Member"
+msgstr ""
+
+#: includes/class-level-list-table.php:136
+msgid "No levels selected"
+msgstr ""
+
+#: includes/class-member-list-table.php:206
+msgid "No members selected"
+msgstr ""
+
+#: includes/class-member-list-table.php:93
+#: includes/class-member-list-table.php:104
+msgid "None"
+msgstr ""
+
+#: includes/class-level-list-table.php:25 includes/class-level-editor.php:108
+msgid "Permissions"
+msgstr ""
+
+#: includes/class-wc-free-download.php:62
+msgid "Please select a file to download"
+msgstr ""
+
+#: includes/class-level-editor.php:103
+msgid "Please select the validity period."
+msgstr ""
+
+#: includes/class-member-list-table.php:28
+msgid "Registration Date"
+msgstr ""
+
+#: includes/class-member-editor.php:113
+msgid "Search user…"
+msgstr ""
+
+#: includes/class-level-list-table.php:132 includes/class-member-editor.php:163
+#: includes/class-member-list-table.php:202
+msgid "Security check failed"
+msgstr ""
+
+#: includes/class-member-editor.php:125 includes/class-level-editor.php:141
+#: includes/class-level-editor.php:186
+msgid "Security check failed."
+msgstr ""
+
+#: includes/class-member-editor.php:83
+msgid "Select Level"
+msgstr ""
+
+#: includes/class-member-editor.php:70
+msgid "Select User"
+msgstr ""
+
+#: includes/class-member-list-table.php:27
+msgid "Status"
+msgstr ""
+
+#: includes/class-level-editor.php:129
+msgid "Update Level"
+msgstr ""
+
+#: includes/class-member-editor.php:105
+msgid "Update Member"
+msgstr ""
+
+#: includes/class-member-editor.php:62
+msgid "User"
+msgstr ""
+
+#: includes/class-member-list-table.php:23
+msgid "Username"
+msgstr ""
+
+#: includes/class-wc-free-download.php:15
+msgid "WooCommerce Free Download"
+msgstr ""
+
+#. Author of the plugin
+msgid "xenice"
+msgstr ""
+
+#. Name of the plugin
+msgid "Xenice Member"
+msgstr ""
+
+#: xenice-member.php:99 xenice-member.php:107
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
