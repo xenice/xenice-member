@@ -83,8 +83,6 @@ This plugin is open-source and welcomes contributions! Feel free to:
 - Report bugs via [Issues](https://github.com/your-username/xenice-member/issues)
 - Submit improvements via [Pull Requests](https://github.com/your-username/xenice-member/pulls)
 
-> Replace `your-username` with your actual GitHub username.
-
 ---
 
 ## 📄 License
