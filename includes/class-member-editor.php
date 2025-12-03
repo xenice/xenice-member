@@ -16,6 +16,7 @@ class Xenice_Member_Editor {
         // Register admin_post hooks
         add_action('admin_post_save_xenice_member', [$this, 'handle_save']);
         add_action('admin_post_delete_xenice_member', [$this, 'handle_delete']);
+        add_action('admin_enqueue_scripts', array($this, 'admin_scripts'));
     }
 
     /**
@@ -50,7 +51,7 @@ class Xenice_Member_Editor {
                 <?php if ($user_id): ?>
                     <input type="hidden" name="user_id" value="<?php echo esc_attr($user_id); ?>">
                 <?php else: ?>
-                    <input type="hidden" name="new_user" value="1">
+                    <input type="hidden" name="add_membership" value="1">
                 <?php endif; ?>
 
                 <table class="form-table">
@@ -101,18 +102,29 @@ class Xenice_Member_Editor {
                 <?php submit_button($user_id ? esc_html__('Update Member', 'xenice-member') : esc_html__('Add Member', 'xenice-member')); ?>
             </form>
         </div>
-
-        <script>
-        jQuery(document).ready(function($){
-            $('.xm-user-select').select2({
-                width: '300px',
-                placeholder: '<?php echo esc_js(__('Search user…', 'xenice-member')); ?>'
-            });
-        });
-        </script>
         <?php
     }
+    
+    public function admin_scripts($hook) {
 
+        if (strpos($hook, 'xenice-member') === false) {
+            return;
+        }
+
+        wp_enqueue_script(
+            'xenice-member-editor-js',
+            XENICE_MEMBER_PLUGIN_URL . 'assets/js/xenice-member-editor.js',
+            array('jquery', 'select2'),
+            '1.0.0',
+            true
+        );
+
+        wp_localize_script('xenice-member-editor-js', 'xeniceMemberEditor', array(
+            'select2Placeholder' => esc_html__('Search user…', 'xenice-member')
+        ));
+    
+    }
+    
     /**
      * Save member handler
      */
@@ -133,14 +145,20 @@ class Xenice_Member_Editor {
             wp_safe_redirect(admin_url('admin.php?page=xenice-member'));
             exit;
         }
-
-        if (isset($_POST['new_user'])) {
+        if (isset($_POST['add_membership'])) {
             $expire = get_user_meta($user_id, 'xm_expire', true);
-            $expire = $expire ? intval($expire) + $duration_value : ($duration_value ? time() + $duration_value : 0);
+            if($expire == 'lifetime'){
+                wp_safe_redirect(admin_url('admin.php?page=xenice-member'));
+                exit;
+            }
+            if(empty($expire) || $expire < time()){
+                $expire = time();
+            }
+            $expire = $expire + $duration_value;
         } else {
             $expire = !empty($_POST['expire']) ? strtotime(sanitize_text_field(wp_unslash($_POST['expire']))) : 0;
         }
-
+        
         update_user_meta($user_id, 'xm_level', $level);
         update_user_meta($user_id, 'xm_expire', $expire);
 

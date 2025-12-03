@@ -1,42 +1,100 @@
-# Xenice Member – WordPress Membership Management Plugin
+# Xenice Member – Easy-to-Use WordPress Membership Plugin
 
-**Version:** 1.0.0  
-**Requires WordPress:** 6.0+  
-**Tested up to:** 6.8  
-**Requires PHP:** 7.4+  
-**License:** [GNU General Public License v2.0 or later](https://www.gnu.org/licenses/gpl-2.0.html)  
-**Text Domain:** `xenice-member`  
-**Author:** [xenice](https://www.xenice.com/)  
+[![WordPress Plugin](https://img.shields.io/badge/WordPress-Plugin-blue)](https://wordpress.org/)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-green.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
----
+**Xenice Member** is a lightweight, flexible, and user-friendly WordPress membership management plugin that helps you easily create and manage membership levels, control content access, and deliver exclusive experiences to your users.
 
-## 📌 Overview
-
-**Xenice Member** is a lightweight yet powerful WordPress plugin for managing website memberships. It enables you to create membership levels, assign users, set expiration dates, and grant exclusive access—such as **free WooCommerce downloads**—based on membership status.
-
-Perfect for sites offering paid content, premium downloads, or tiered user access, this plugin provides a clean admin interface with essential features out of the box—no bloat, no complexity.
+Whether you're running an online course platform, a private community, or a resource download site, Xenice Member gives you the tools to build a powerful membership system—without complexity.
 
 ---
 
-## ✨ Features
+## 🖼️ Screenshots
 
-- **Flexible Membership Levels**: Built-in support for *Lifetime*, *Annual*, *Monthly*, or fully custom durations.
-- **Member Management Editor**: Easily add, edit, or delete members from a dedicated admin panel with sortable columns.
-- **Expiration Control**: Automatically track and enforce membership expiration dates.
-- **Role-Based Permissions**: Assign special capabilities (e.g., “WooCommerce Free Download”) to specific members.
-- **WooCommerce Integration**: Members with permission see a **free download button** on eligible downloadable products—even if the product normally costs money.
-- **User-Friendly Admin UI**: Intuitive interface designed for quick setup and daily management.
+1. **Members Management**  
+   ![Members Management](screenshots/screenshot-1.png)
+
+2. **Add Member**  
+   ![Add Member](screenshots/screenshot-2.png)
+
+3. **Edit Member**  
+   ![Edit Member](screenshots/screenshot-3.png)
+
+4. **Membership Levels Management**  
+   ![Membership Levels Management](screenshots/screenshot-4.png)
+
+5. **Add Membership Level**  
+   ![Add Membership Level](screenshots/screenshot-5.png)
+
+6. **Edit Membership Level**  
+   ![Edit Membership Level](screenshots/screenshot-6.png)
+
+> 💡 Screenshots are located in the `/screenshots/` directory of this repository.
 
 ---
 
-## 📥 Installation
+## ✨ Key Features
 
-### Method 1: WordPress Dashboard
-1. Go to **Plugins > Add New** in your WordPress admin.
-2. Search for **"Xenice Member"** (if published on WordPress.org) or upload the ZIP file via **Upload Plugin**.
-3. Click **Install Now**, then **Activate**.
+- **Flexible Membership Levels**  
+  Create unlimited membership tiers (e.g., Monthly, Annual, Lifetime, or custom levels) with unique permissions.
 
-### Method 2: Manual Upload
-1. Download or clone the plugin into your `/wp-content/plugins/` directory:
-   ```bash
-   git clone https://github.com/xenice/xenice-member.git
+- **Granular Permission Control**  
+  Restrict access to posts, pages, downloads, or features based on membership level.
+
+- **Intuitive Admin Dashboard**  
+  Easily view, search, filter, and manage members. Perform bulk actions like editing expiration dates or deleting accounts.
+
+- **WooCommerce Integration**  
+  Offer members exclusive **free downloads** (single or multi-file) via direct links or popups—perfect for digital products.
+
+- **Automatic Expiration & Status Tracking**  
+  Set expiration dates and let the plugin automatically update member status (Active / Expired / Lifetime).
+
+- **Multilingual Ready**  
+  Fully compatible with WordPress multilingual plugins (e.g., WPML, Polylang) for global websites.
+
+---
+
+## 📦 Installation
+
+1. **Download** the plugin ZIP file or clone this repository.
+2. Upload the `xenice-member` folder to your `/wp-content/plugins/` directory.
+3. Activate **Xenice Member** from your WordPress admin dashboard (`Plugins > Installed Plugins`).
+4. Navigate to **Members** in your admin menu to start configuring membership levels and managing users.
+
+> 💡 No external dependencies required. Works out of the box with any WordPress theme.
+
+---
+
+## 🎯 Ideal Use Cases
+
+- Online education & course platforms  
+- Private content or resource libraries  
+- Employee-only intranet portals  
+- Paid community or subscription sites  
+- WooCommerce stores with member-exclusive downloads
+
+---
+
+## 🛠️ Development & Contribution
+
+This plugin is open-source and welcomes contributions! Feel free to:
+
+- Report bugs via [Issues](https://github.com/your-username/xenice-member/issues)
+- Submit improvements via [Pull Requests](https://github.com/your-username/xenice-member/pulls)
+
+> Replace `your-username` with your actual GitHub username.
+
+---
+
+## 📄 License
+
+Xenice Member is licensed under the **GNU General Public License v3.0 (GPLv3)**.
+
+---
+
+## 🙌 About Xenice
+
+Developed by [Xenice](https://xenice.com) — building simple, powerful tools for WordPress creators worldwide.
+
+Made with ❤️ for the WordPress community.

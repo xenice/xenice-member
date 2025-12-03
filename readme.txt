@@ -1,10 +1,10 @@
 === Xenice Member ===
 Contributors: xenice
 Tags: membership, member management, WooCommerce, download, roles
-Requires at least: 6.0
-Tested up to: 6.8
+Requires at least: 6.5
+Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: xenice-member
@@ -37,7 +37,21 @@ Go to the Member Editor in the admin menu, select the user, and choose the membe
 = Can I offer free downloads for certain products? =
 Yes. If the user has the "WooCommerce Free Download" permission, a free download button will appear on downloadable products.
 
+== Screenshots ==
+1. Members management
+2. Add member
+3. Edit member
+4. Membership levels management
+5. Add membership level
+6. Edit membership level
+
 == Changelog ==
+= 1.0.2 =
+* Fix bug.
+
+= 1.0.1 =
+* Add nonce verification to the edit page.
+
 = 1.0.0 =
 * Initial release with member and level management
 * Added WooCommerce free download integration

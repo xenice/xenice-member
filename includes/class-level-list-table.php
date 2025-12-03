@@ -148,7 +148,7 @@ class Xenice_Level_List_Table extends WP_List_Table {
         update_option( 'xenice_member_levels', $xenice_member_updated_levels );
 
         // Safe redirect
-        wp_safe_redirect( add_query_arg( 'deleted', $xenice_member_deleted_count, admin_url( 'admin.php?page=xenice-member-levels' ) ) );
+        wp_safe_redirect( admin_url( 'admin.php?page=xenice-member-levels' ) );
         exit;
     }
 }

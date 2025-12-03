@@ -3,7 +3,7 @@
  * Plugin Name: Xenice Member
  * Plugin URI: https://www.xenice.com/xenice-member
  * Description: A comprehensive membership management plugin for WordPress.
- * Version: 1.0.0
+ * Version: 1.0.2
  * Author: xenice
  * Author URI: https://www.xenice.com/
  * License: GPL2+
@@ -19,7 +19,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Define plugin constants
-define('XENICE_MEMBER_VERSION', '1.0.0');
+define('XENICE_MEMBER_VERSION', '1.0.2');
 define('XENICE_MEMBER_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('XENICE_MEMBER_PLUGIN_DIR', plugin_dir_path(__FILE__));
 
@@ -41,7 +41,7 @@ class Xenice_Member {
         add_action('init', array($this, 'init'));
         add_action('admin_menu', array($this, 'admin_menu'));
         add_action('admin_enqueue_scripts', array($this, 'admin_scripts'));
-
+        
         // Register activation hook
         register_activation_hook(__FILE__, array($this, 'activate'));
     }
@@ -63,9 +63,7 @@ class Xenice_Member {
         }
 
         require_once XENICE_MEMBER_PLUGIN_DIR . 'includes/class-wc-free-download.php';
-        require_once XENICE_MEMBER_PLUGIN_DIR . 'includes/class-wc-product-grant.php';
         new Xenice_WC_Free_Download;
-        Xenice_Member_WC_Product_Grant::get_instance();
     }
 
     public function admin_menu() {

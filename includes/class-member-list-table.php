@@ -54,9 +54,18 @@ class Xenice_Member_List_Table extends WP_List_Table {
             admin_url('admin-post.php?action=delete_xenice_member&user_id=' . intval($item->ID)),
             'delete_member'
         );
+        
+        $edit_url = wp_nonce_url(
+            admin_url('admin.php?page=xenice-member&action=edit&user_id=' . intval($item->ID)),
+            'edit_member'
+        );
 
         $actions = array(
-            'edit' => sprintf('<a href="%s">%s</a>', $edit_url, esc_html__('Edit Member', 'xenice-member')),
+            'edit' => sprintf(
+                '<a href="%s">%s</a>',
+                esc_url($edit_url),
+                esc_html__('Edit Member', 'xenice-member')
+            ),
             'delete' => sprintf(
                 '<a href="%s" onclick="return confirm(\'%s\');">%s</a>',
                 esc_url($delete_url),
@@ -188,26 +197,35 @@ class Xenice_Member_List_Table extends WP_List_Table {
         if ('delete' !== $this->current_action()) {
             return;
         }
+    
+
+        if (!current_user_can('manage_options')) {
+            wp_die(esc_html__('You do not have permission to perform this action.', 'xenice-member'));
+        }
+    
 
         $nonce = isset($_REQUEST['_wpnonce']) ? sanitize_text_field(wp_unslash($_REQUEST['_wpnonce'])) : '';
         if (!wp_verify_nonce($nonce, 'bulk-members')) {
-            wp_die(esc_html__('Security check failed', 'xenice-member'));
+            wp_die(esc_html__('Security check failed.', 'xenice-member'));
         }
-
+    
         if (!isset($_REQUEST['member']) || empty($_REQUEST['member'])) {
-            wp_die(esc_html__('No members selected', 'xenice-member'));
+            wp_die(esc_html__('No members selected.', 'xenice-member'));
         }
-
+    
         $user_ids = array_map('intval', $_REQUEST['member']);
         $deleted_count = 0;
-
+    
         foreach ($user_ids as $user_id) {
-            if (delete_user_meta($user_id, 'xm_level') && delete_user_meta($user_id, 'xm_expire')) {
-                $deleted_count++;
+
+            if (get_user_by('ID', $user_id)) {
+                if (delete_user_meta($user_id, 'xm_level') || delete_user_meta($user_id, 'xm_expire')) {
+                    $deleted_count++;
+                }
             }
         }
-
-        wp_safe_redirect(add_query_arg('deleted', $deleted_count, admin_url('admin.php?page=xenice-member')));
+    
+        wp_safe_redirect(admin_url('admin.php?page=xenice-member'));
         exit;
     }
 }
